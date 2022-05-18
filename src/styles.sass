@@ -1,0 +1,58 @@
+html, body
+    margin: 0
+    padding: 0
+    height: 100%
+    width: 100%
+
+*
+    font-family: arial, sans-serif
+    --color_absent: #444444
+    --color_present: #d3a31f
+    --color_correct: #4fad23
+
+@keyframes error-shake
+    0%
+        margin-left: 0
+    5%
+        margin-left: -4rem
+    15%
+        margin-left: 3rem
+    30%
+        margin-left: -4rem
+    45%
+        margin-left: 2rem
+    60%
+        margin-left: -2rem
+    75%
+        margin-left: 1rem
+    90%
+        margin-left: -1rem
+    100%
+        margin-left: 0
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+    body
+        zoom: 0.6
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)
+    body
+        zoom: 0.7
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px)
+    body
+        zoom: 1.0
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px)
+    body
+        zoom: 0.9
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px)
+    body
+        zoom: 1
+

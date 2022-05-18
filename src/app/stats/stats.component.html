@@ -1,0 +1,35 @@
+<div *ngIf="stats.shown">
+    <div id="stats_backdrop"></div>
+    <div id="stats">
+        <a href="#" (click)="close()">X</a>
+        <h1>Worgo</h1>
+        <h2>yet another Wordle clone</h2>
+        <div class="stats">
+            <div>
+                <h1>{{ stats.gamesPlayed }}</h1>
+                <span>played</span>
+            </div>
+            <div>
+                <h1>{{ stats.gamesPlayed === 0 ? 0 : stats.gamesWon / stats.gamesPlayed * 100 | number:'1.0-0' }}%</h1>
+                <span>win rate</span>
+            </div>
+            <div>
+                <h1>{{ stats.currentStreak }}</h1>
+                <span>current<br>streak</span>
+            </div>
+            <div>
+                <h1>{{ stats.bestStreak }}</h1>
+                <span>max<br>streak</span>
+            </div>
+        </div>
+        <hr>
+        <h3>Guess distribution</h3>
+        <ol class="distribution">
+            <li
+                *ngFor="let result of stats.gameResults"
+                [class]="{highest: result !== 0 && bestAverageResult === result}"
+                [style]="{width: bestAverageResult === 0 ? 0 : (result / bestAverageResult * 100) + '%'}"
+            >{{result}}</li>
+        </ol>
+    </div>
+</div>

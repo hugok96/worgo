@@ -1,0 +1,7 @@
+<div id="game">
+    <div [class]="{'guess-row':true, 'guess-shake': gameService.invalidGuess === i}" *ngFor="let row of guesses;let i=index;">
+        <div class="guess-letter" *ngFor="let char of row | split: 5;let j=index;"
+             [attr.data-state]="getRowGuessState(i)[j]">{{ char }}</div>
+    </div>
+    <div id="reset-button" (click)="reset()">RESET</div>
+</div>

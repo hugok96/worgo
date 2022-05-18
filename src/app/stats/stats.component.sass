@@ -1,0 +1,78 @@
+#stats_backdrop
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background: rgba(0, 0, 0, 0.15)
+    filter: blur(10px)
+    z-index: 1
+
+#stats
+    position: fixed
+    width: 52rem
+    max-width: 95vw
+    height: fit-content
+    max-height: 95vh
+    background: #131313
+    border: 1px solid #2b2b2b
+    color: white
+    border-radius: 1rem
+    margin: auto
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    z-index: 2
+    text-align: center
+    padding: 1rem 0
+
+    a
+        text-decoration: none
+        color: #626262
+        font-size: 2rem
+        position: absolute
+        right: 1.5rem
+
+    h1
+        margin-bottom: 0
+
+    h2
+        margin-top: 0
+        font-weight: normal
+        font-style: italic
+        font-size: 1rem
+
+    .stats
+        display: flex
+        justify-content: center
+        padding: 0px 10rem
+
+        div
+            flex: 1
+
+    hr
+        border-color: #2b2b2b
+        margin-top: 1rem
+
+    ol
+        list-style: none
+        font-size: 1.5rem
+        counter-reset: item
+        padding: 0 2rem 0 3.5rem
+
+        li
+            background: var(--color_absent)
+            margin-bottom: .5rem
+            text-align: right
+            padding: 0 2rem 0 1rem
+            box-sizing: border-box
+
+            &.highest
+                background: var(--color_correct)
+
+            &:before
+                content: counter(item)
+                counter-increment: item
+                float: left
+                margin-left: -2.5rem

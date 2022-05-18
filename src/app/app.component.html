@@ -1,0 +1,11 @@
+<main>
+    <app-stats></app-stats>
+    <div id="header">
+        Worgo
+        <button (click)="stats.shown = true">statistics</button>
+    </div>
+    <div id="stats_blur" [class]="{blurred: stats.shown}">
+        <app-game></app-game>
+        <app-keyboard></app-keyboard>
+    </div>
+</main>

@@ -1,0 +1,39 @@
+#keyboard
+    width: auto
+    display: inline-flex
+    flex-direction: column
+    position: fixed
+    bottom: 1rem
+    left: 0
+    right: 0
+
+    .keyboard-row
+        display: flex
+        justify-content: center
+
+        .keyboard-button
+            text-transform: uppercase
+            background: #969696
+            padding: 1rem
+            font-size: 1rem
+            color: white
+            font-weight: bold
+            margin: 0.25rem
+            border-radius: 0.5rem
+            min-width: 3rem
+            text-align: center
+            border: 0
+            cursor: pointer
+            transition: transform 1s, background .2s .4s
+
+            &[data-state]
+                transform: rotateX(180deg) scale(1, -1)
+
+            &[data-state="absent"]
+                background: var(--color_absent)
+
+            &[data-state="present"]
+                background: var(--color_present)
+
+            &[data-state="correct"]
+                background: var(--color_correct)
